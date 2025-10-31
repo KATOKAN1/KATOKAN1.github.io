@@ -1,203 +1,143 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Оселедец Андрей — Системный аналитик</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-slate-100 text-slate-800">
-<main class="max-w-5xl mx-auto my-8 bg-white shadow-xl rounded-xl overflow-hidden flex flex-col lg:flex-row">
+<header class="bg-slate-900 text-white py-16 px-6 text-center">
+  <h1 class="text-3xl font-semibold">Оселедец Андрей</h1>
+  <p class="text-lg text-slate-300 mt-4">
+    Системный аналитик / Интеграции систем / Banking & FinTech
+  </p>
+  <p class="text-sm text-slate-400 mt-2">
+    REST · SOAP · TLS · Spring Boot · Apache Camel · SQL · Postgres · ClickHouse
+  </p>
 
-  <!-- ЛЕВАЯ КОЛОНКА -->
-  <aside class="lg:w-1/3 bg-slate-900 text-white p-8 flex flex-col gap-8">
-    <section class="flex flex-col gap-4">
-      <!-- аватар (можешь выкинуть, если не хочешь фото) -->
-      <div class="w-24 h-24 rounded-full ring-2 ring-white/20 bg-slate-700 flex items-center justify-center text-white text-xl font-semibold">
-        АО
-      </div>
-
-      <div>
-        <h1 class="text-2xl font-semibold leading-tight text-white">
-          Оселедец Андрей
-        </h1>
-        <p class="text-sm text-slate-300">
-          Системный аналитик / Интеграции / Java
-        </p>
-        <p class="text-[11px] text-slate-400 mt-1">
-          Краснодар · готов к переезду/командировкам
-        </p>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="text-xs uppercase tracking-widest text-slate-400 font-semibold">
-        Контакты
-      </h2>
-      <ul class="mt-3 space-y-2 text-sm">
-        <li>
-          <span class="font-medium text-white">Тел:</span>
-          <a class="text-slate-300 hover:text-white" href="tel:+79261441790">
-            +7 (926) 144-17-90
-          </a>
-        </li>
-        <li>
-          <span class="font-medium text-white">Email:</span>
-          <a class="text-slate-300 hover:text-white" href="mailto:andrey_o.job@mail.ru">
-            andrey_o.job@mail.ru
-          </a>
-        </li>
-        <li>
-          <span class="font-medium text-white">GitHub:</span>
-          <a class="text-slate-300 hover:text-white break-all" href="https://github.com/yourlogin" target="_blank">
-            github.com/yourlogin
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 class="text-xs uppercase tracking-widest text-slate-400 font-semibold">
-        Основные навыки
-      </h2>
-      <ul class="mt-3 flex flex-wrap gap-2 text-xs leading-relaxed">
-        <li class="bg-slate-800/70 px-2 py-1 rounded">Системная аналитика</li>
-        <li class="bg-slate-800/70 px-2 py-1 rounded">Интеграции (REST / SOAP)</li>
-        <li class="bg-slate-800/70 px-2 py-1 rounded">UML / BPMN / Use Case</li>
-        <li class="bg-slate-800/70 px-2 py-1 rounded">SQL · Postgres · ClickHouse</li>
-        <li class="bg-slate-800/70 px-2 py-1 rounded">Spring Boot · Apache Camel</li>
-        <li class="bg-slate-800/70 px-2 py-1 rounded">Java</li>
-      </ul>
-    </section>
-
-    <a
-      href="resume.pdf"
-      class="inline-block bg-white text-slate-900 text-center font-medium text-sm px-4 py-2 rounded-lg shadow hover:bg-slate-100 transition"
-    >
-      Скачать PDF
+  <div class="flex flex-col sm:flex-row gap-3 justify-center mt-8 text-sm">
+    <a href="mailto:andrey_o.job@mail.ru"
+       class="bg-white text-slate-900 px-4 py-2 rounded-lg font-medium shadow hover:bg-slate-100">
+      Написать мне
     </a>
-  </aside>
+    <a href="resume.pdf"
+       class="bg-slate-800 text-white px-4 py-2 rounded-lg font-medium ring-1 ring-white/20 hover:bg-slate-700">
+      PDF резюме
+    </a>
+  </div>
+</header>
 
-  <!-- ПРАВАЯ ЧАСТЬ -->
-  <section class="lg:w-2/3 p-8 space-y-10">
+<main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
 
-    <section>
-      <h2 class="text-xl font-semibold text-slate-900 border-b border-slate-200 pb-2">
-        Профиль
-      </h2>
-      <p class="mt-4 text-sm leading-relaxed text-slate-700">
-        Системный аналитик с опытом в банковской сфере и интеграциях.
-        Собираю и формализую требования, описываю контракты REST/SOAP,
-        проектирую интерфейсы взаимодействия между системами, участвую
-        в архитектурных сессиях. Есть практика в Java и Spring Boot —
-        могу не только описать ТЗ, но и понимать реализацию.
-      </p>
-    </section>
-
-    <section>
-      <h2 class="text-xl font-semibold text-slate-900 border-b border-slate-200 pb-2">
-        Опыт
-      </h2>
-
-      <!-- Иннотех -->
-      <article class="mt-6">
-        <div class="flex flex-wrap items-baseline justify-between gap-2">
-          <h3 class="font-medium text-slate-900 text-base">
-            Системный аналитик · Иннотех
-          </h3>
-          <span class="text-xs text-slate-500">Сентябрь 2024 — сейчас</span>
-        </div>
-        <p class="text-xs text-slate-500 italic">
-          Поддержка и развитие фронтальных решений для корпоративных клиентов ВТБ
+  <!-- Key competencies -->
+  <section>
+    <h2 class="text-xl font-semibold text-slate-900">Чем я полезен</h2>
+    <div class="mt-6 grid sm:grid-cols-2 gap-6 text-sm text-slate-700">
+      <div class="p-4 rounded-lg bg-white shadow">
+        <h3 class="font-medium text-slate-900">Системная аналитика</h3>
+        <p class="mt-2 leading-relaxed">
+          Сбор и формализация требований, подготовка ТЗ, постановка задач
+          фронту и бэку, участие в архитектурных решениях.
         </p>
-        <ul class="list-disc ml-5 mt-3 text-sm leading-relaxed text-slate-700">
-          <li>Сбор и детализация требований через интервью с заказчиком.</li>
-          <li>Анализ фронта (UX / поведение интерфейса) и бэка (логика, БД, интеграции).</li>
-          <li>Подготовка прототипов и пользовательских сценариев.</li>
-          <li>Постановка задач разработчикам через понятные ТЗ.</li>
-          <li>Участие в архитектурных обсуждениях и тестировании решений.</li>
-        </ul>
+      </div>
+      <div class="p-4 rounded-lg bg-white shadow">
+        <h3 class="font-medium text-slate-900">Интеграции и безопасность</h3>
+        <p class="mt-2 leading-relaxed">
+          REST / SOAP интерфейсы, защищённые каналы TLS, обмен между банковскими системами,
+          согласование протоколов с безопасностью и смежными командами.
+        </p>
+      </div>
+      <div class="p-4 rounded-lg bg-white shadow">
+        <h3 class="font-medium text-slate-900">Банковский домен</h3>
+        <p class="mt-2 leading-relaxed">
+          Цифровой рубль, документооборот (ЭДО, СБИС), хранилища корпоративных данных,
+          интеграция с АБС и ФинЦерт.
+        </p>
+      </div>
+      <div class="p-4 rounded-lg bg-white shadow">
+        <h3 class="font-medium text-slate-900">Практика разработки</h3>
+        <p class="mt-2 leading-relaxed">
+          Spring Boot, Apache Camel, Java. Понимаю реализацию, могу говорить с разработчиками
+          на их языке.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project cases -->
+  <section>
+    <h2 class="text-xl font-semibold text-slate-900">Проектные кейсы</h2>
+    <div class="mt-6 space-y-8 text-sm text-slate-700 leading-relaxed">
+      <article class="bg-white p-5 rounded-lg shadow">
+        <h3 class="font-medium text-slate-900">
+          Цифровой рубль
+        </h3>
+        <p class="text-xs text-slate-500 mt-1">
+          UML · REST · SOAP · банковская интеграция
+        </p>
+        <p class="mt-3">
+          Проектирование интерфейсов, протоколов и форматов данных
+          для безопасной поддержки цифрового рубля.
+        </p>
       </article>
 
-      <!-- Кубань Кредит, Java -->
-      <article class="mt-8">
-        <div class="flex flex-wrap items-baseline justify-between gap-2">
-          <h3 class="font-medium text-slate-900 text-base">
-            Java-разработчик · Банк «Кубань Кредит»
-          </h3>
-          <span class="text-xs text-slate-500">Июнь 2024 — Август 2024</span>
-        </div>
-        <p class="text-xs text-slate-500 italic">
-          Разработка интеграционных сервисов (Spring Boot, Apache Camel, Postgres)
+      <article class="bg-white p-5 rounded-lg shadow">
+        <h3 class="font-medium text-slate-900">
+          Vault-хранилище корпоративных данных
+        </h3>
+        <p class="text-xs text-slate-500 mt-1">
+          REST · SOAP · TLS
         </p>
-        <ul class="list-disc ml-5 mt-3 text-sm leading-relaxed text-slate-700">
-          <li>С нуля сделал сервис загрузки отчётности из Яндекс.Директ / Яндекс.Бизнес.</li>
-          <li>Дорабатывал сервис интеграции с АБС.</li>
-          <li>Запустил первый этап сервиса по получению фидов из ФинЦерт.</li>
-        </ul>
+        <p class="mt-3">
+          Интеграция защищённого хранилища с внутренними сервисами.
+          Фокус на шифрование, доступ по защищённым каналам, соответствие политике безопасности.
+        </p>
       </article>
 
-      <!-- Кубань Кредит, Аналитик -->
-      <article class="mt-8">
-        <div class="flex flex-wrap items-baseline justify-between gap-2">
-          <h3 class="font-medium text-slate-900 text-base">
-            Системный аналитик · Банк «Кубань Кредит»
-          </h3>
-          <span class="text-xs text-slate-500">Октябрь 2023 — Май 2024</span>
-        </div>
-        <p class="text-xs text-slate-500 italic">
-          Интеграция банковских систем, безопасность каналов, цифровой рубль
+      <article class="bg-white p-5 rounded-lg shadow">
+        <h3 class="font-medium text-slate-900">
+          Интеграция с АСОИ ФинЦерт
+        </h3>
+        <p class="text-xs text-slate-500 mt-1">
+          Spring Boot · Apache Camel · TLS · обмен событиями
         </p>
-        <ul class="list-disc ml-5 mt-3 text-sm leading-relaxed text-slate-700">
-          <li>Цифровой рубль: проектирование интерфейсов и протоколов (UML, REST, SOAP).</li>
-          <li>Vault-хранилище данных: интеграция с защищёнными каналами TLS.</li>
-          <li>ЭДО / СБИС: описание интерфейсов и протоколов для обмена документами.</li>
-          <li>АСОИ ФинЦерт: безопасный обмен данными через TLS.</li>
-        </ul>
+        <p class="mt-3">
+          Реализация безопасного обмена данными: получение фидов, обработка,
+          доставка дальше по внутренним шинам.
+        </p>
       </article>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2 class="text-xl font-semibold text-slate-900 border-b border-slate-200 pb-2">
-        Образование
-      </h2>
-      <ul class="mt-4 text-sm leading-relaxed text-slate-700">
-        <li>
-          Магистр, Менеджмент организации — Институт международного права и экономики им. А.С. Грибоедова, Москва (2022)
-        </li>
-        <li>
-          Прикладная информатика, Системный анализ и обработка информации — Кубанский ГАУ, Краснодар (2020)
-        </li>
-      </ul>
-    </section>
+  <!-- Timeline experience -->
+  <section>
+    <h2 class="text-xl font-semibold text-slate-900">Опыт (таймлайн)</h2>
+    <ol class="relative border-l border-slate-300 mt-6 text-sm text-slate-700 leading-relaxed">
+      <li class="mb-10 ml-4">
+        <div class="absolute w-3 h-3 bg-slate-900 rounded-full -left-[6px] top-1.5"></div>
+        <time class="text-xs text-slate-500">09.2024 — сейчас</time>
+        <h3 class="text-base font-medium text-slate-900">Иннотех · Системный аналитик</h3>
+        <p>Фронт и бэк для корпоративных клиентов ВТБ: требования, прототипы, архитектура, тестирование.</p>
+      </li>
 
-    <section>
-      <h2 class="text-xl font-semibold text-slate-900 border-b border-slate-200 pb-2">
-        Курсы и технологии
-      </h2>
-      <p class="mt-4 text-sm leading-relaxed text-slate-700">
-        Java-PRO (2024, SkillBox) · Python-разработчик (2023, SkillBox) ·
-        Системный анализ (2023, GeekBrains) ·
-        SQL · BPMN · UML · Use Case · DFD · IDEF · REST API · SOAP ·
-        Spring Boot · Apache Maven · Git · CI/CD
-      </p>
-    </section>
+      <li class="mb-10 ml-4">
+        <div class="absolute w-3 h-3 bg-slate-900 rounded-full -left-[6px] top-1.5"></div>
+        <time class="text-xs text-slate-500">06.2024 — 08.2024</time>
+        <h3 class="text-base font-medium text-slate-900">Банк «Кубань Кредит» · Java-разработчик</h3>
+        <p>Spring Boot + Camel: сервисы отчётности (Яндекс.Директ/Бизнес), интеграция с АБС, ФинЦерт.</p>
+      </li>
 
-    <section>
-      <h2 class="text-xl font-semibold text-slate-900 border-b border-slate-200 pb-2">
-        Дополнительно
-      </h2>
-      <p class="mt-4 text-sm leading-relaxed text-slate-700">
-        B1 английский · Водительские права A/B · Свой автомобиль.
-        Увлекаюсь силовыми тренировками (пауэрлифтинг) и музыкой.
-      </p>
-    </section>
+      <li class="ml-4">
+        <div class="absolute w-3 h-3 bg-slate-900 rounded-full -left-[6px] top-1.5"></div>
+        <time class="text-xs text-slate-500">10.2023 — 05.2024</time>
+        <h3 class="text-base font-medium text-slate-900">Банк «Кубань Кредит» · Системный аналитик</h3>
+        <p>Цифровой рубль, Vault, ЭДО (СБИС), ФинЦерт. REST/SOAP/TLS, согласование протоколов и безопасности.</p>
+      </li>
+    </ol>
+  </section>
 
+  <!-- Education + footer / contacts -->
+  <section class="text-center text-sm text-slate-600">
+    Магистр менеджмента (2022), Институт МПиЭ им. Грибоедова ·
+    Прикладная информатика (2020), КубГАУ
+    <div class="mt-4">
+      <a class="underline" href="mailto:andrey_o.job@mail.ru">andrey_o.job@mail.ru</a>
+      · +7 (926) 144-17-90
+    </div>
   </section>
 </main>
-
-<footer class="text-center text-xs text-slate-500 my-6">
+<footer class="text-center text-[11px] text-slate-400 py-8">
   © 2025 Оселедец Андрей
 </footer>
-</body>
-</html>
