@@ -3,549 +3,236 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Оселедец Андрей — Системный аналитик</title>
+  <title>Оселедец Андрей — аналитик интеграций</title>
 
-  <!-- Шрифт чуть техничный, деловой -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  />
-
-  <style>
-    :root {
-      --bg-page: #f5f6f8;
-      --bg-card: #ffffff;
-      --bg-sidebar: #f1f2f5;
-      --text-main: #1f2937;
-      --text-dim: #6b7280;
-      --accent: #111827;
-      --border: #e5e7eb;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background-color: var(--bg-page);
-      color: var(--text-main);
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-      line-height: 1.5;
-    }
-
-    .resume-wrapper {
-      max-width: 1200px;
-      margin: 32px auto;
-      background-color: var(--bg-card);
-      border-radius: 16px;
-      box-shadow:
-        0 24px 48px -12px rgba(0,0,0,0.15),
-        0 4px 12px rgba(0,0,0,0.06);
-      display: flex;
-      flex-wrap: wrap;
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
-
-    .sidebar {
-      flex: 0 0 320px;
-      background-color: var(--bg-sidebar);
-      padding: 32px;
-      border-right: 1px solid var(--border);
-    }
-
-    .main {
-      flex: 1 1 0;
-      min-width: 0;
-      padding: 32px 40px;
-    }
-
-    @media (max-width: 800px) {
-      .sidebar {
-        flex: 1 1 100%;
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-      }
-      .main {
-        flex: 1 1 100%;
-        padding: 24px 24px 40px;
-      }
-    }
-
-    /* Sidebar sections */
-    .avatar-block {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-    }
-
-    .avatar-circle {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background: var(--accent);
-      color: #fff;
-      font-weight: 600;
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-    }
-
-    .name-block h1 {
-      margin: 0 0 4px;
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--accent);
-      line-height: 1.3;
-    }
-
-    .name-block .role {
-      margin: 0;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--text-main);
-    }
-
-    .name-block .meta {
-      margin: 4px 0 0;
-      font-size: 0.8rem;
-      color: var(--text-dim);
-      line-height: 1.4;
-    }
-
-    .section-title {
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: var(--text-dim);
-      margin: 24px 0 8px;
-    }
-
-    .contact-list,
-    .tag-list,
-    .info-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      font-size: 0.85rem;
-      line-height: 1.5;
-      color: var(--text-main);
-      word-break: break-word;
-    }
-
-    .contact-list li + li,
-    .info-list li + li {
-      margin-top: 6px;
-    }
-
-    .contact-label {
-      font-weight: 500;
-      color: var(--accent);
-    }
-
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .tag {
-      background-color: #e5e7eb;
-      color: #111827;
-      border-radius: 6px;
-      padding: 4px 8px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      line-height: 1.4;
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-
-    .about-text {
-      font-size: 0.85rem;
-      color: var(--text-main);
-      line-height: 1.5;
-      margin-top: 8px;
-      white-space: pre-line;
-    }
-
-    /* Main content */
-    header.main-header h2 {
-      margin: 0;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--accent);
-      line-height: 1.25;
-    }
-
-    header.main-header .subtitle {
-      margin: 8px 0 0;
-      font-size: 0.95rem;
-      color: var(--text-dim);
-      line-height: 1.4;
-      max-width: 700px;
-    }
-
-    .block {
-      margin-top: 32px;
-    }
-
-    .block-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--accent);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 8px;
-      margin: 0 0 16px;
-      line-height: 1.4;
-    }
-
-    .job {
-      margin-bottom: 24px;
-      font-size: 0.9rem;
-      line-height: 1.5;
-      color: var(--text-main);
-    }
-
-    .job-header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 8px;
-    }
-
-    .job-title {
-      font-weight: 600;
-      color: var(--accent);
-      font-size: 1rem;
-      line-height: 1.4;
-    }
-
-    .job-company {
-      font-size: 0.9rem;
-      color: var(--text-main);
-      font-weight: 500;
-    }
-
-    .job-dates {
-      font-size: 0.8rem;
-      color: var(--text-dim);
-      white-space: nowrap;
-    }
-
-    .job-meta {
-      font-size: 0.8rem;
-      color: var(--text-dim);
-      margin-top: 2px;
-      line-height: 1.4;
-    }
-
-    .job ul {
-      margin: 8px 0 0 1.1rem;
-      padding: 0;
-      color: var(--text-main);
-    }
-    .job li {
-      margin-bottom: 6px;
-    }
-
-    .project-list .project {
-      margin-bottom: 20px;
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-
-    .project-name {
-      font-weight: 600;
-      color: var(--accent);
-      font-size: 0.95rem;
-      line-height: 1.4;
-    }
-
-    .project-stack {
-      font-size: 0.8rem;
-      color: var(--text-dim);
-      line-height: 1.4;
-      margin-top: 2px;
-      font-style: italic;
-    }
-
-    .project-desc {
-      margin-top: 6px;
-      font-size: 0.9rem;
-      color: var(--text-main);
-    }
-
-    .edu-list {
-      font-size: 0.9rem;
-      line-height: 1.5;
-      color: var(--text-main);
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .edu-item {
-      margin-bottom: 16px;
-    }
-
-    .edu-title {
-      font-weight: 600;
-      color: var(--accent);
-    }
-
-    .footer-note {
-      margin-top: 40px;
-      font-size: 0.7rem;
-      color: var(--text-dim);
-      line-height: 1.4;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100 antialiased">
 
-<div class="resume-wrapper">
-
-  <!-- ===== LEFT SIDEBAR ===== -->
-  <aside class="sidebar">
-
-    <div class="avatar-block">
-      <div class="avatar-circle">АО</div>
-      <div class="name-block">
-        <h1>Оселедец Андрей</h1>
-        <p class="role">Системный аналитик</p>
-        <p class="meta">
-          27 лет · Краснодар<br/>
-          Готов к переезду и командировкам
-        </p>
-      </div>
-    </div>
-
-    <div>
-      <div class="section-title">Контакты</div>
-      <ul class="contact-list">
-        <li>
-          <span class="contact-label">Тел:</span>
-          <a href="tel:+79261441790" style="color:inherit;text-decoration:none;">
-            +7&nbsp;(926)&nbsp;144-17-90
-          </a>
-        </li>
-        <li>
-          <span class="contact-label">Email:</span>
-          <a href="mailto:andrey_o.job@mail.ru" style="color:inherit;text-decoration:none;">
-            andrey_o.job@mail.ru
-          </a>
-        </li>
-        <li>
-          <span class="contact-label">Город:</span>
-          Краснодар, РФ
-        </li>
-        <li>
-          <span class="contact-label">Гражданство:</span>
-          Россия
-        </li>
-        <li>
-          Готов к релокации
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <div class="section-title">Навыки / стек</div>
-      <ul class="tag-list">
-        <li class="tag">Системная аналитика</li>
-        <li class="tag">Сбор требований</li>
-        <li class="tag">BPMN / UML / Use Case</li>
-        <li class="tag">Интеграции REST / SOAP / TLS</li>
-        <li class="tag">Java · Spring Boot</li>
-        <li class="tag">Apache Camel</li>
-        <li class="tag">SQL · Postgres · ClickHouse</li>
-        <li class="tag">JSON / XML / XSD</li>
-        <li class="tag">Confluence</li>
-        <li class="tag">CI/CD · Git · Maven</li>
-        <li class="tag">Тестирование</li>
-      </ul>
-    </div>
-
-    <div>
-      <div class="section-title">Языки</div>
-      <ul class="info-list">
-        <li><strong>Русский</strong> — Родной</li>
-        <li><strong>Английский</strong> — B1 (Средний)</li>
-      </ul>
-    </div>
-
-    <div>
-      <div class="section-title">Дополнительно</div>
-      <ul class="info-list">
-        <li>Права A, B · свой автомобиль</li>
-        <li>Пауэрлифтинг, музыка</li>
-      </ul>
-    </div>
-
-    <div>
-      <div class="section-title">Обо мне</div>
-      <div class="about-text">
-        Целеустремлённый и быстрообучаемый специалист.
-        Легко выстраиваю рабочие контакты с бизнесом и разработкой.
-        Быстро адаптируюсь к новым процессам, технологиям и доменам.
-        Вне работы — спорт (пауэрлифтинг) и музыка.
-      </div>
-    </div>
-
-  </aside>
-
-  <!-- ===== MAIN CONTENT ===== -->
-  <section class="main">
-
-    <header class="main-header">
-      <h2>Системный аналитик / Интеграции / Банковский домен</h2>
-      <p class="subtitle">
-        Работаю на стыке бизнеса и разработки: формализую требования,
-        описываю контракты и протоколы интеграции, помогаю фронту и бэку
-        договориться на уровне данных, API и логики.
+  <!-- HERO -->
+  <header class="px-6 py-16 text-center bg-gradient-to-b from-slate-900 to-slate-950">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-xs uppercase tracking-[0.15em] text-slate-400 font-medium">
+        Системный аналитик / Интеграции / Banking &amp; FinTech
       </p>
-    </header>
 
-    <!-- Опыт -->
-    <div class="block">
-      <h3 class="block-title">Опыт</h3>
+      <h1 class="mt-4 text-3xl font-semibold text-white leading-tight">
+        Оселедец Андрей
+      </h1>
 
-      <article class="job">
-        <div class="job-header">
-          <div>
-            <div class="job-title">Системный аналитик</div>
-            <div class="job-company">Иннотех · Группа компаний</div>
-          </div>
-          <div class="job-dates">Сентябрь 2024 — Настоящее время</div>
-        </div>
-        <div class="job-meta">
-          Поддержание и развитие фронтальных решений корпоративных клиентов ВТБ
-        </div>
-        <ul>
-          <li>Сбор и документирование требований через интервью с заказчиком.</li>
-          <li>Анализ фронтенда (UX, сценарии пользователя) и бэкенда
-              (логика, БД, интеграции).</li>
-          <li>Подготовка бизнес-кейсов, сценариев использования и прототипов UI.</li>
-          <li>Формирование постановок / ТЗ для разработчиков.</li>
-          <li>Актуализация проектных артефактов: спецификации, диаграммы, отчёты.</li>
-          <li>Участие в обсуждении архитектуры и выборе технологий.</li>
-          <li>Участие в тестировании — проверка соответствия решения требованиям.</li>
-        </ul>
-      </article>
+      <p class="mt-4 text-sm text-slate-400 leading-relaxed">
+        Описываю и защищаю интеграции между системами: REST / SOAP / TLS,
+        проектирую контракты и сценарии взаимодействия. Знаю и бизнес,
+        и реализацию (Java, Spring Boot, Apache Camel).
+        27 лет · Краснодар · готов к релокации и командировкам.
+      </p>
 
-      <article class="job">
-        <div class="job-header">
-          <div>
-            <div class="job-title">Java-разработчик</div>
-            <div class="job-company">Банк «Кубань Кредит»</div>
-          </div>
-          <div class="job-dates">Июнь 2024 — Август 2024</div>
-        </div>
-        <div class="job-meta">
-          Отдел разработки систем интеграции · Spring Boot · Apache Camel · Postgres · ClickHouse
-        </div>
-        <ul>
-          <li>С нуля реализовал сервис получения отчётности из Яндекс.Директ и Яндекс.Бизнес.</li>
-          <li>Поддерживал и дорабатывал интеграционный сервис с АБС.</li>
-          <li>Запустил первый этап сервиса по получению списка фидов из ФинЦерт.</li>
-          <li>Стек: Java 7/17/21, Spring Boot, Apache Camel, SQL, REST, Maven, Git.</li>
-        </ul>
-      </article>
-
-      <article class="job">
-        <div class="job-header">
-          <div>
-            <div class="job-title">Системный аналитик</div>
-            <div class="job-company">Банк «Кубань Кредит»</div>
-          </div>
-          <div class="job-dates">Октябрь 2023 — Май 2024</div>
-        </div>
-        <div class="job-meta">
-          Интеграция банковских систем, безопасность каналов, цифровой рубль
-        </div>
-        <ul>
-          <li>Сбор и анализ требований от стейкхолдеров, подготовка тех. документации.</li>
-          <li>Проектирование архитектуры интеграций:
-              интерфейсы, протоколы, форматы данных, безопасность.</li>
-          <li>Контроль, чтобы решения по интеграции соответствовали ожиданиям бизнеса и стандартам.</li>
-          <li>Координация команд разработки, тестирования и бизнеса.</li>
-          <li>Консультации и обучение команд по вопросам интеграций и защищённых каналов.</li>
-        </ul>
-      </article>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center mt-8 text-sm">
+        <a
+          href="mailto:andrey_o.job@mail.ru"
+          class="bg-white text-slate-900 px-4 py-2 rounded-lg font-medium shadow hover:bg-slate-100"
+        >
+          Написать на почту
+        </a>
+        <a
+          href="tel:+79261441790"
+          class="bg-slate-800 text-white px-4 py-2 rounded-lg font-medium ring-1 ring-white/20 hover:bg-slate-700"
+        >
+          Позвонить: +7&nbsp;(926)&nbsp;144-17-90
+        </a>
+      </div>
     </div>
+  </header>
 
-    <!-- Проекты -->
-    <div class="block project-list">
-      <h3 class="block-title">Ключевые проекты</h3>
+  <main class="max-w-4xl mx-auto px-6 py-16 space-y-16">
 
-      <div class="project">
-        <div class="project-name">Цифровой рубль</div>
-        <div class="project-stack">UML · REST · SOAP</div>
-        <div class="project-desc">
-          Проектирование интерфейсов и протоколов для поддержки цифрового рубля.
-          Определение форматов данных и правил безопасного обмена.
+    <!-- КОМПЕТЕНЦИИ -->
+    <section>
+      <h2 class="text-xl font-semibold text-white">
+        Чем я полезен
+      </h2>
+
+      <div class="mt-8 grid sm:grid-cols-2 gap-6 text-sm text-slate-300">
+        <div class="p-5 rounded-xl bg-slate-900/60 ring-1 ring-white/10 shadow-lg shadow-black/40">
+          <h3 class="font-medium text-white">Системная аналитика</h3>
+          <p class="mt-2 leading-relaxed text-slate-400">
+            Интервью с заказчиком, формализация требований, сценарии использования,
+            прототипы интерфейсов, понятные ТЗ для фронта и бэка.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-slate-900/60 ring-1 ring-white/10 shadow-lg shadow-black/40">
+          <h3 class="font-medium text-white">Интеграции и безопасность</h3>
+          <p class="mt-2 leading-relaxed text-slate-400">
+            REST / SOAP / TLS, согласование форматов данных, маршрутизация,
+            безопасные каналы и требования безопасности.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-slate-900/60 ring-1 ring-white/10 shadow-lg shadow-black/40">
+          <h3 class="font-medium text-white">Практика разработки</h3>
+          <p class="mt-2 leading-relaxed text-slate-400">
+            Java (7/17/21), Spring Boot, Apache Camel, Postgres, ClickHouse,
+            CI/CD, Maven, Git — умею говорить с разработчиками на их языке.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-slate-900/60 ring-1 ring-white/10 shadow-lg shadow-black/40">
+          <h3 class="font-medium text-white">Банковский домен</h3>
+          <p class="mt-2 leading-relaxed text-slate-400">
+            Цифровой рубль, интеграция с АБС, ЭДО (СБИС),
+            безопасные фиды ФинЦерт. Работа с корпоративными клиентами ВТБ.
+          </p>
         </div>
       </div>
+    </section>
 
-      <div class="project">
-        <div class="project-name">Vault-хранилище корпоративных данных</div>
-        <div class="project-stack">REST · SOAP · TLS</div>
-        <div class="project-desc">
-          Интеграция защищённого хранилища с внутренними сервисами банка.
-          Обеспечение шифрования, защищённых каналов и соответствия политике безопасности.
-        </div>
+    <!-- ПРОЕКТЫ / КЕЙСЫ -->
+    <section>
+      <h2 class="text-xl font-semibold text-white">
+        Ключевые кейсы
+      </h2>
+
+      <div class="mt-8 space-y-8 text-sm leading-relaxed">
+        <article class="bg-slate-900/60 ring-1 ring-white/10 rounded-xl p-5 shadow-lg shadow-black/40">
+          <h3 class="font-medium text-white">
+            Цифровой рубль
+          </h3>
+          <p class="text-[12px] text-slate-500 mt-1">
+            UML · REST · SOAP
+          </p>
+          <p class="mt-3 text-slate-300">
+            Проектирование интерфейсов и протоколов для безопасной поддержки цифрового рубля.
+            Форматы данных, обмен, требования безопасности.
+          </p>
+        </article>
+
+        <article class="bg-slate-900/60 ring-1 ring-white/10 rounded-xl p-5 shadow-lg shadow-black/40">
+          <h3 class="font-medium text-white">
+            Vault-хранилище корпоративных данных
+          </h3>
+          <p class="text-[12px] text-slate-500 mt-1">
+            REST · SOAP · TLS
+          </p>
+          <p class="mt-3 text-slate-300">
+            Интеграция защищённого хранилища с внутренними сервисами банка.
+            Шифрование, защищённые каналы, политика безопасности.
+          </p>
+        </article>
+
+        <article class="bg-slate-900/60 ring-1 ring-white/10 rounded-xl p-5 shadow-lg shadow-black/40">
+          <h3 class="font-medium text-white">
+            Интеграция ЭДО (СБИС)
+          </h3>
+          <p class="text-[12px] text-slate-500 mt-1">
+            REST · SOAP
+          </p>
+          <p class="mt-3 text-slate-300">
+            Настройка обмена документами, унификация протоколов взаимодействия с внешними сервисами ЭДО.
+          </p>
+        </article>
+
+        <article class="bg-slate-900/60 ring-1 ring-white/10 rounded-xl p-5 shadow-lg shadow-black/40">
+          <h3 class="font-medium text-white">
+            АСОИ ФинЦерт
+          </h3>
+          <p class="text-[12px] text-slate-500 mt-1">
+            Spring Boot · Apache Camel · TLS
+          </p>
+          <p class="mt-3 text-slate-300">
+            Безопасный обмен фидами и событиями с ФинЦерт.
+            Реализация передачи данных через защищённые TLS-каналы.
+          </p>
+        </article>
       </div>
+    </section>
 
-      <div class="project">
-        <div class="project-name">Системы ЭДО (СБИС)</div>
-        <div class="project-stack">REST · SOAP</div>
-        <div class="project-desc">
-          Настройка обмена документами и протоколов взаимодействия с внешними системами ЭДО.
-        </div>
-      </div>
+    <!-- ТАЙМЛАЙН ОПЫТА -->
+    <section>
+      <h2 class="text-xl font-semibold text-white">
+        Опыт по времени
+      </h2>
 
-      <div class="project">
-        <div class="project-name">АСОИ ФинЦерт</div>
-        <div class="project-stack">Spring Boot · Apache Camel · Защищённые каналы TLS</div>
-        <div class="project-desc">
-          Безопасный обмен событиями и фидами с внешней системой ФинЦерт.
-          Реализация защищённой передачи данных через TLS.
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Образование -->
-    <div class="block">
-      <h3 class="block-title">Образование и курсы</h3>
-
-      <ul class="edu-list">
-        <li class="edu-item">
-          <div class="edu-title">Магистр менеджмента организации</div>
-          <div>Институт международного права и экономики им. А.С. Грибоедова, Москва · 2022</div>
+      <ol class="relative border-l border-slate-700 mt-8 text-sm leading-relaxed text-slate-300">
+        <li class="mb-10 ml-4">
+          <div class="absolute w-3 h-3 bg-white rounded-full -left-[6px] top-1.5 shadow-[0_0_10px_rgba(255,255,255,0.6)]"></div>
+          <time class="text-[11px] text-slate-500">09.2024 — сейчас</time>
+          <h3 class="text-base font-medium text-white mt-1">
+            Иннотех · Системный аналитик
+          </h3>
+          <p class="text-[12px] text-slate-500 italic">
+            Поддержание и развитие фронтальных решений корпоративных клиентов ВТБ
+          </p>
+          <ul class="list-disc ml-5 mt-3 space-y-1">
+            <li>Сбор / документирование требований, интервью с заказчиками.</li>
+            <li>Анализ фронта и бэка: сценарии, логика, БД, интеграции.</li>
+            <li>Подготовка прототипов и постановок (ТЗ).</li>
+            <li>Архитектурные обсуждения, участие в тестировании.</li>
+          </ul>
         </li>
-        <li class="edu-item">
-          <div class="edu-title">Прикладная информатика / Системный анализ и обработка информации</div>
-          <div>Кубанский государственный аграрный университет, Краснодар · 2020</div>
-        </li>
-        <li class="edu-item">
-          <div class="edu-title">Разработчик Java-PRO (SkillBox, 2024)</div>
-          <div>Также: Python-разработчик (2023), Системный анализ (GeekBrains, 2023)</div>
-        </li>
-      </ul>
-    </div>
 
-    <div class="footer-note">
-      Последнее обновление: 31 октября 2025
-    </div>
-  </section>
-</div>
+        <li class="mb-10 ml-4">
+          <div class="absolute w-3 h-3 bg-white rounded-full -left-[6px] top-1.5 shadow-[0_0_10px_rgba(255,255,255,0.6)]"></div>
+          <time class="text-[11px] text-slate-500">06.2024 — 08.2024</time>
+          <h3 class="text-base font-medium text-white mt-1">
+            Банк «Кубань Кредит» · Java-разработчик
+          </h3>
+          <p class="text-[12px] text-slate-500 italic">
+            Отдел разработки систем интеграции
+          </p>
+          <ul class="list-disc ml-5 mt-3 space-y-1">
+            <li>С нуля реализовал сервис выгрузки отчётности из Яндекс.Директ / Яндекс.Бизнес.</li>
+            <li>Доработка интеграционного сервиса с АБС.</li>
+            <li>Первый этап сервиса по получению фидов из ФинЦерт.</li>
+            <li>Стек: Java 7/17/21, Spring Boot, Apache Camel, Postgres, ClickHouse, REST, Maven, Git.</li>
+          </ul>
+        </li>
 
+        <li class="ml-4">
+          <div class="absolute w-3 h-3 bg-white rounded-full -left-[6px] top-1.5 shadow-[0_0_10px_rgba(255,255,255,0.6)]"></div>
+          <time class="text-[11px] text-slate-500">10.2023 — 05.2024</time>
+          <h3 class="text-base font-medium text-white mt-1">
+            Банк «Кубань Кредит» · Системный аналитик
+          </h3>
+          <p class="text-[12px] text-slate-500 italic">
+            Интеграции банковских систем, цифровой рубль, безопасность каналов
+          </p>
+          <ul class="list-disc ml-5 mt-3 space-y-1">
+            <li>Сбор и анализ требований, техдокументация.</li>
+            <li>Проектирование интерфейсов, протоколов, форматов данных и механизмов безопасности.</li>
+            <li>Согласование интеграций с разработкой, тестированием и бизнесом.</li>
+            <li>Консультации команд по вопросам защищённых интеграций.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ОБРАЗОВАНИЕ / КОНТАКТ -->
+    <section class="text-center text-slate-400 text-sm">
+      <div class="font-medium text-slate-100">
+        Образование
+      </div>
+      <div class="mt-2">
+        Магистр менеджмента организации (2022), Институт международного права
+        и экономики им. А.С. Грибоедова, Москва
+      </div>
+      <div class="mt-2">
+        Прикладная информатика / Системный анализ и обработка информации (2020),
+        Кубанский ГАУ, Краснодар
+      </div>
+
+      <div class="mt-6">
+        Английский B1 · Права A/B · Собственный авто
+      </div>
+
+      <div class="mt-6 text-slate-500">
+        andrey_o.job@mail.ru · +7 (926) 144-17-90 · Краснодар
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center text-[11px] text-slate-700 pb-16">
+    © 2025 Оселедец Андрей
+  </footer>
 </body>
 </html>
